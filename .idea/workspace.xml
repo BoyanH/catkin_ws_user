@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d615f4fb-001f-44fc-a5f8-8bc2b4e37d9b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/task05_driving_parallel/scripts/driving_parallel.py" afterPath="$PROJECT_DIR$/src/task05_driving_parallel/scripts/driving_parallel.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/task05_driving_parallel/scripts/pd_controller_odom.py" afterPath="$PROJECT_DIR$/src/task05_driving_parallel/scripts/pd_controller_odom.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +16,8 @@
       <file leaf-file-name="pd_controller_odom.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/pd_controller_odom.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="46" column="33" lean-forward="false" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -28,8 +26,8 @@
       <file leaf-file-name="heading_straight.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/heading_straight.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="44" column="8" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="37" />
+            <state relative-caret-position="432">
+              <caret line="40" column="20" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -38,8 +36,8 @@
       <file leaf-file-name="driving_parallel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/driving_parallel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="79" column="37" lean-forward="true" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+            <state relative-caret-position="225">
+              <caret line="77" column="4" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="79" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -50,6 +48,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>get_delta_heading</find>
+      <find>Kd</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -73,8 +72,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="452" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="960" />
+    <option name="height" value="1051" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -283,26 +282,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/driving_parallel.py">
+    <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/heading_straight.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="79" column="37" lean-forward="true" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+        <state relative-caret-position="432">
+          <caret line="40" column="20" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/heading_straight.py">
+    <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/driving_parallel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="44" column="8" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="37" />
+        <state relative-caret-position="225">
+          <caret line="77" column="4" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="79" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/pd_controller_odom.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="46" column="33" lean-forward="false" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
           <folding />
         </state>
       </provider>
