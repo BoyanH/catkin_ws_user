@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pd_controller_odom.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pd_controller_odom.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/pd_controller_odom.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="e#23#35#0" expanded="true" />
               </folding>
@@ -29,18 +29,20 @@
       <file leaf-file-name="heading_straight.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/heading_straight.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="32" />
-              <folding />
+            <state relative-caret-position="486">
+              <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="36" />
+              <folding>
+                <element signature="e#23#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="driving_parallel.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="driving_parallel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/driving_parallel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state relative-caret-position="162">
+              <caret line="21" column="23" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="21" selection-end-column="23" />
               <folding>
                 <element signature="e#41#53#0" expanded="true" />
               </folding>
@@ -73,6 +75,14 @@
       <find>10</find>
       <find>300</find>
       <find>0.</find>
+      <find>ge_c</find>
+      <find>desired_y</find>
+      <find>desired_y_delta</find>
+      <find>pub_stop_start</find>
+      <find>rospy.loginf</find>
+      <find>yaw_callback</find>
+      <find>current_yaw</find>
+      <find>current_yaw&lt;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -83,8 +93,8 @@
       <list>
         <option value="$PROJECT_DIR$/.catkin_tools/odroid/build.yaml" />
         <option value="$PROJECT_DIR$/.catkin_tools/odroid/config.yaml" />
-        <option value="$PROJECT_DIR$/src/task05_driving_parallel/scripts/pd_controller_odom.py" />
         <option value="$PROJECT_DIR$/src/task05_driving_parallel/scripts/driving_parallel.py" />
+        <option value="$PROJECT_DIR$/src/task05_driving_parallel/scripts/pd_controller_odom.py" />
       </list>
     </option>
   </component>
@@ -306,30 +316,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/pd_controller_odom.py">
+    <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/heading_straight.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="486">
+          <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="36" />
           <folding>
             <element signature="e#23#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/heading_straight.py">
+    <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/driving_parallel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="162">
+          <caret line="21" column="23" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <element signature="e#41#53#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/driving_parallel.py">
+    <entry file="file://$PROJECT_DIR$/src/task05_driving_parallel/scripts/pd_controller_odom.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        <state relative-caret-position="240">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="e#41#53#0" expanded="true" />
+            <element signature="e#23#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

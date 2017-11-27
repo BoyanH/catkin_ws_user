@@ -22,7 +22,8 @@ lookahead_distance = 0.5
 desired_dist_wall = 0.4
 inited = False
 Kp = 2.5
-Kd = 1 # TODO: adjust, when Kp adjustment is ready
+Kd = 0.1
+control_frequency = 10
 initial_time = None
 last_steering_delta = 0
 infinity = float('inf')
@@ -102,7 +103,7 @@ def scan_callback(scan_msg):
         return
 
     # rospy.loginfo(delta_in_deg)
-    steer_angle = Kp * steering_delta + Kd*(steering_delta - last_steering_delta) + calibrated_angle
+    steer_angle = Kp * steering_delta + Kd*(steering_delta - last_steering_delta)*control_frequency + calibrated_angle
 
     if steer_angle > 179:
         steer_angle = 179
