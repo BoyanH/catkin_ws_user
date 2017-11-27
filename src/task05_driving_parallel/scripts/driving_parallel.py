@@ -45,6 +45,7 @@ def measure_distance_and_angle(dist_l2, dist_r2, angle_between_measurements):
 
     curve_angle = theta_l2 - angle_between_measurements / 2
 
+    pub_distance.publish(distance_to_wall) # hope this distance is meant to be plotted, measured from rear axle
     return distance_to_wall, curve_angle
 
 
@@ -54,8 +55,11 @@ def get_delta_heading(scan_msg):
     # get distances
     dist_l2, dist_r2 = measure_distances(ranges)
     dist_to_wall, curve_angle = measure_distance_and_angle(dist_l2, dist_r2, angle_between_measurements)
-    return get_delta_heading_from_dis_and_angle(dist_to_wall, curve_angle, dist_axles,
+    delta_heading = get_delta_heading_from_dis_and_angle(dist_to_wall, curve_angle, dist_axles,
                                                 lookahead_distance, desired_dist_wall)
+
+    pub_theta.publish(delta_heading)
+    return delta_heading
 
 
 def get_delta_heading_from_dis_and_angle(dist_wall, curve_angle, dist_axles, dist_lookahead, desired_dist_wall):
@@ -73,6 +77,7 @@ def scan_callback(scan_msg):
         initial_time = rospy.get_time()
     elif rospy.get_time() - initial_time > 10:
         pub_speed.publish(0)
+        rospy.signal_shutdown("done")
 
     calibrated_angle = get_calibrated_steering(90)
     delta_heading = get_delta_heading(scan_msg)
@@ -85,9 +90,10 @@ def scan_callback(scan_msg):
         return
 
     rospy.loginfo(delta_in_deg)
-    pub_steer.publish(Kp * steering_delta + + Kd*(steering_delta - last_steering_delta) + calibrated_angle)
+    steer_angle = Kp * steering_delta + + Kd*(steering_delta - last_steering_delta) + calibrated_angle
 
     last_steering_delta = steering_delta
+    pub_steer.publish(steer_angle)
 
 
 def start_experiment():
@@ -107,5 +113,8 @@ if __name__ == "__main__":
     pub_steer = rospy.Publisher("/manual_control/steering", Int16, queue_size=100)
     pub_speed = rospy.Publisher("/manual_control/speed", Int16, queue_size=100)
     pub_unlock = rospy.Publisher("/manual_control/stop_start", Int16, queue_size=100)
+    pub_distance = rospy.Publisher("/logging/distance", Int16, queue_size=100)
+    pub_theta = rospy.Publisher("/logging/angle_theta", Int16, queue_size=100)
+    pub_angle_steer = rospy.Publisher("/logging/angle_steer", Int16, queue_size=100)
     rospy.Subscriber("scan", LaserScan, scan_callback, queue_size=100)
     rospy.spin()

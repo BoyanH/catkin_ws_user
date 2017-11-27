@@ -16,7 +16,7 @@ def get_calibrated_steering():
 
 
 def odom_callback(odom_msg):
-    #steering = Kp * (desired_angle - current_angle) + calibrated_angle
+    steering = Kp * (desired_angle - current_angle) + calibrated_angle
 
 
     #stop after 10 seconds
