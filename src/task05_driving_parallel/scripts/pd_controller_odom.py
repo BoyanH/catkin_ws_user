@@ -6,7 +6,7 @@ import math
 import numpy as np
 from nav_msgs.msg import Odometry
 from std_msgs.msg import Int16
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 experiment_started = False
 desired_y = None
@@ -49,6 +49,7 @@ def odom_callback(odom_msg):
 
 
 def start_experiment():
+
     global experiment_started
 
     if experiment_started:
