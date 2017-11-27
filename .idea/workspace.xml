@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d615f4fb-001f-44fc-a5f8-8bc2b4e37d9b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CATKIN_IGNORE" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CATKIN_IGNORE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/src/auto_stop.cpp.o" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/src/auto_stop.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/Visual_gps.pdf" afterPath="$PROJECT_DIR$/src/assignment6_gps/Visual_gps.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/img.png" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/img.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/misc/cluster midpoints.png" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/misc/cluster midpoints.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/README.md" afterPath="$PROJECT_DIR$/src/fu_line_detection/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/include/EMPTY" afterPath="$PROJECT_DIR$/src/fu_line_detection/include/EMPTY" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lisa_visual_gps/Visual_gps.pdf" afterPath="$PROJECT_DIR$/src/lisa_visual_gps/Visual_gps.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/.catkin_tools.yaml" afterPath="$PROJECT_DIR$/odroid-build/.catkin_tools.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeCache.txt" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/2.8.12.2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/2.8.12.2/CMakeCCompiler.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/2.8.12.2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/2.8.12.2/CMakeCXXCompiler.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/2.8.12.2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/2.8.12.2/CMakeSystem.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/CMakeDirectoryInformation.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/CMakeError.log" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/CMakeError.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/CMakeOutput.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/CMakeRuleHashes.txt" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/CMakeRuleHashes.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/CXX.includecache" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/depend.internal" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/depend.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/flags.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/link.txt" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/auto_stop_node.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results_auto_stop_usr.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results_auto_stop_usr.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results_auto_stop_usr.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results_auto_stop_usr.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results_auto_stop_usr.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results_auto_stop_usr.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results_auto_stop_usr.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/clean_test_results_auto_stop_usr.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/cmake.check_cache" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/cmake.check_cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/download_extra_data.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/download_extra_data.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/download_extra_data.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/download_extra_data.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/download_extra_data.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/download_extra_data.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/download_extra_data.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/download_extra_data.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/doxygen.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/doxygen.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/doxygen.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/doxygen.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/doxygen.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/doxygen.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/doxygen.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/doxygen.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_py.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_py.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_py.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/geometry_msgs_generate_messages_py.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_cpp.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_cpp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_lisp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_lisp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_lisp.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_lisp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_py.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_py.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_py.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/roscpp_generate_messages_py.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/run_tests.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/run_tests.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/run_tests.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/run_tests.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/run_tests.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/run_tests.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/run_tests.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/run_tests.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_py.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_py.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_py.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_py.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_py.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/sensor_msgs_generate_messages_py.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_cpp.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_cpp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_lisp.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_lisp.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_py.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_py.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_py.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/std_msgs_generate_messages_py.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/tests.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/tests.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/tests.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/tests.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/tests.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/tests.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/tests.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CMakeFiles/tests.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CTestTestfile.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/CTestTestfile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/Makefile" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin/catkin_generated/version/package.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin/catkin_generated/version/package.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/generate_cached_setup.py" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/generate_cached_setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/.rosinstall" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/.rosinstall" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/auto_stop_usr.pc" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/auto_stop_usr.pc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/auto_stop_usrConfig-version.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/auto_stop_usrConfig-version.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/auto_stop_usrConfig.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/auto_stop_usrConfig.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/setup.bash" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/setup.bash" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/setup.sh" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/setup.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/setup.zsh" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/installspace/setup.zsh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/ordered_paths.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/ordered_paths.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/package.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/package.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/pkg.develspace.context.pc.py" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/pkg.develspace.context.pc.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/pkg.installspace.context.pc.py" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/pkg.installspace.context.pc.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/stamps/auto_stop_usr/interrogate_setup_dot_py.py.stamp" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/stamps/auto_stop_usr/interrogate_setup_dot_py.py.stamp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/stamps/auto_stop_usr/package.xml.stamp" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/stamps/auto_stop_usr/package.xml.stamp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/stamps/auto_stop_usr/pkg.pc.em.stamp" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin_generated/stamps/auto_stop_usr/pkg.pc.em.stamp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/cmake_install.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/CMakeDirectoryInformation.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/depend.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/flags.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/link.txt" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/build.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/depend.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/flags.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/link.txt" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/progress.make" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/gtest_main.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CTestTestfile.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/CTestTestfile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/Makefile" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/cmake_install.cmake" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/gtest/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/auto_stop_usr/install_manifest.txt" afterPath="$PROJECT_DIR$/odroid-build/auto_stop_usr/install_manifest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/odroid-build/build_logs/auto_stop_usr.log" afterPath="$PROJECT_DIR$/odroid-build/build_logs/auto_stop_usr.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CMakeLists.txt" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Toolchain-arm-linux-gnueabihf.cmake" afterPath="$PROJECT_DIR$/src/Toolchain-arm-linux-gnueabihf.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/CMakeLists.txt" afterPath="$PROJECT_DIR$/src/assignment6_gps/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/package.xml" afterPath="$PROJECT_DIR$/src/assignment6_gps/package.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/angle_localisation.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/angle_localisation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/balloon_detector.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/balloon_detector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/balloon_detector_ndimage.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/balloon_detector_ndimage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/misc/Lane_Segmentation.ipynb" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/misc/Lane_Segmentation.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/misc/colorspace-visualizer.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/misc/colorspace-visualizer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/misc/crop-mouse-cb.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/misc/crop-mouse-cb.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/misc/cv2-sliders.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/misc/cv2-sliders.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/misc/example_blob_detector.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/misc/example_blob_detector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/misc/fps_counter.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/misc/fps_counter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/misc/locator.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/misc/locator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/misc/minarea.cpp" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/misc/minarea.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/misc/minarea.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/misc/minarea.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/misc/multithreading_test.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/misc/multithreading_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/misc/plot_dbscan.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/misc/plot_dbscan.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/perf_test.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/perf_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/perf_test2.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/perf_test2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/perf_test_ndimage.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/perf_test_ndimage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/plot_test_images.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/plot_test_images.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/range_calibration.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/range_calibration.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/range_calibration_improved.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/range_calibration_improved.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment6_gps/src/rectified_localisation.py" afterPath="$PROJECT_DIR$/src/assignment6_gps/src/rectified_localisation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/.gitignore" afterPath="$PROJECT_DIR$/src/deep_car/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/README.md" afterPath="$PROJECT_DIR$/src/deep_car/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/deep_car/__init__.py" afterPath="$PROJECT_DIR$/src/deep_car/deep_car/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/deep_car/data.py" afterPath="$PROJECT_DIR$/src/deep_car/deep_car/data.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/deep_car/model.py" afterPath="$PROJECT_DIR$/src/deep_car/deep_car/model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/notebooks/driver.ipynb" afterPath="$PROJECT_DIR$/src/deep_car/notebooks/driver.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/notebooks/rosbag_to_hdf5.ipynb" afterPath="$PROJECT_DIR$/src/deep_car/notebooks/rosbag_to_hdf5.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/notebooks/train.ipynb" afterPath="$PROJECT_DIR$/src/deep_car/notebooks/train.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/requirements.txt" afterPath="$PROJECT_DIR$/src/deep_car/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/scripts/car_connect.sh" afterPath="$PROJECT_DIR$/src/deep_car/scripts/car_connect.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/scripts/clear_ros_env.sh" afterPath="$PROJECT_DIR$/src/deep_car/scripts/clear_ros_env.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/scripts/connect_to_car.sh" afterPath="$PROJECT_DIR$/src/deep_car/scripts/connect_to_car.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/scripts/crop_img.py" afterPath="$PROJECT_DIR$/src/deep_car/scripts/crop_img.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/scripts/driver.py" afterPath="$PROJECT_DIR$/src/deep_car/scripts/driver.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/scripts/resize_img80x60.py" afterPath="$PROJECT_DIR$/src/deep_car/scripts/resize_img80x60.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deep_car/setup.py" afterPath="$PROJECT_DIR$/src/deep_car/setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix/CMakeLists.txt" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix/config/default.calib" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix/config/default.calib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix/config/test.calib" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix/config/test.calib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix/include/fisheye_camera_matrix/camera_matrix.hpp" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix/include/fisheye_camera_matrix/camera_matrix.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix/launch/calibrate_offline_manual.launch" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix/launch/calibrate_offline_manual.launch" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix/launch/camera_matrix_publisher.launch" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix/launch/camera_matrix_publisher.launch" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix/launch/undistorted_image_publisher.launch" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix/launch/undistorted_image_publisher.launch" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix/package.xml" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix/package.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix/src/camera_matrix.cpp" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix/src/camera_matrix.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix/src/camera_matrix_publisher.cpp" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix/src/camera_matrix_publisher.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix/src/offline_calibration_manual.cpp" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix/src/offline_calibration_manual.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix/src/undistorted_image_publisher.cpp" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix/src/undistorted_image_publisher.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix/srv/perspective_projection.srv" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix/srv/perspective_projection.srv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix_msgs/CMakeLists.txt" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix_msgs/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix_msgs/msg/CameraMatrix.msg" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix_msgs/msg/CameraMatrix.msg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fisheye_camera_matrix_msgs/package.xml" afterPath="$PROJECT_DIR$/src/fisheye_camera_matrix_msgs/package.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/CMakeLists.txt" afterPath="$PROJECT_DIR$/src/fu_line_detection/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/launch/line_detection_fu.launch" afterPath="$PROJECT_DIR$/src/fu_line_detection/launch/line_detection_fu.launch" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/package.xml" afterPath="$PROJECT_DIR$/src/fu_line_detection/package.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/laneDetection.cpp" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/laneDetection.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/laneDetection.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/laneDetection.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/Common.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/Common.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/Edges.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/Edges.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/FuPoint.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/FuPoint.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/FuVector.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/FuVector.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/IPMapper.cpp" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/IPMapper.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/IPMapper.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/IPMapper.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/LanePolynomial.cpp" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/LanePolynomial.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/LanePolynomial.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/LanePolynomial.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/LineSegment.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/LineSegment.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/NewtonPolynomial.cpp" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/NewtonPolynomial.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/NewtonPolynomial.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/NewtonPolynomial.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/attributes.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/attributes.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/enums.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/enums.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/has_member.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/has_member.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/position.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/position.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fu_line_detection/src/tools/units.h" afterPath="$PROJECT_DIR$/src/fu_line_detection/src/tools/units.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/CHANGELOG.rst" afterPath="$PROJECT_DIR$/src/fub_controller/CHANGELOG.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/CMakeLists.txt" afterPath="$PROJECT_DIR$/src/fub_controller/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/README" afterPath="$PROJECT_DIR$/src/fub_controller/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/launch/ControllerModelCar.launch" afterPath="$PROJECT_DIR$/src/fub_controller/launch/ControllerModelCar.launch" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/nodelet_plugins.xml" afterPath="$PROJECT_DIR$/src/fub_controller/nodelet_plugins.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/package.xml" afterPath="$PROJECT_DIR$/src/fub_controller/package.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/ControllerMig.cpp" afterPath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/ControllerMig.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/ControllerMig.h" afterPath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/ControllerMig.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/PathFollower.cpp" afterPath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/PathFollower.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/PathFollower.h" afterPath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/PathFollower.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/SteerController.cpp" afterPath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/SteerController.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/SteerController.h" afterPath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/SteerController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/VehicleState.cpp" afterPath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/VehicleState.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/VehicleState.h" afterPath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/VehicleState.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/main.cpp" afterPath="$PROJECT_DIR$/src/fub_controller/src/controller_mig/main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/util/DynamicConfigurationHelper.h" afterPath="$PROJECT_DIR$/src/fub_controller/src/util/DynamicConfigurationHelper.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/util/Math.cpp" afterPath="$PROJECT_DIR$/src/fub_controller/src/util/Math.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/util/Math.h" afterPath="$PROJECT_DIR$/src/fub_controller/src/util/Math.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/util/Spline.cpp" afterPath="$PROJECT_DIR$/src/fub_controller/src/util/Spline.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/src/util/Spline.h" afterPath="$PROJECT_DIR$/src/fub_controller/src/util/Spline.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/tests/TestSteeringAndWheelRatio.cpp" afterPath="$PROJECT_DIR$/src/fub_controller/tests/TestSteeringAndWheelRatio.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_controller/tests/testMath.cpp" afterPath="$PROJECT_DIR$/src/fub_controller/tests/testMath.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_trajectory_msgs/CMakeLists.txt" afterPath="$PROJECT_DIR$/src/fub_trajectory_msgs/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_trajectory_msgs/README.md" afterPath="$PROJECT_DIR$/src/fub_trajectory_msgs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_trajectory_msgs/msg/Trajectory.msg" afterPath="$PROJECT_DIR$/src/fub_trajectory_msgs/msg/Trajectory.msg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_trajectory_msgs/msg/TrajectoryPoint.msg" afterPath="$PROJECT_DIR$/src/fub_trajectory_msgs/msg/TrajectoryPoint.msg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fub_trajectory_msgs/package.xml" afterPath="$PROJECT_DIR$/src/fub_trajectory_msgs/package.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lisa_visual_gps/CMakeLists.txt" afterPath="$PROJECT_DIR$/src/lisa_visual_gps/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lisa_visual_gps/package.xml" afterPath="$PROJECT_DIR$/src/lisa_visual_gps/package.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/odom_validation/README.md" afterPath="$PROJECT_DIR$/src/odom_validation/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/odom_validation/src/odom_camera_ref.txt" afterPath="$PROJECT_DIR$/src/odom_validation/src/odom_camera_ref.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/odom_validation/src/odom_car_ref.txt" afterPath="$PROJECT_DIR$/src/odom_validation/src/odom_car_ref.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/task04_scan_grid/package.xml" afterPath="$PROJECT_DIR$/src/task04_scan_grid/package.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/task04_steering_calibration/package.xml" afterPath="$PROJECT_DIR$/src/task04_steering_calibration/package.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test_model_car/CMakeLists.txt" afterPath="$PROJECT_DIR$/src/test_model_car/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test_model_car/launch/publish_light.launch" afterPath="$PROJECT_DIR$/src/test_model_car/launch/publish_light.launch" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test_model_car/package.xml" afterPath="$PROJECT_DIR$/src/test_model_car/package.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test_model_car/src/test_model_car_node.cpp" afterPath="$PROJECT_DIR$/src/test_model_car/src/test_model_car_node.cpp" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="build.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.catkin_tools/odroid/build.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.catkin_tools/odroid/config.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.cmake" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin/catkin_generated/version/package.cmake">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.catkin_tools/odroid/build.yaml" />
+        <option value="$PROJECT_DIR$/.catkin_tools/odroid/config.yaml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="452" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource ProjectPane="true" />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="catkin_ws_user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catkin_ws_user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catkin_ws_user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catkin_ws_user" type="462c0819:PsiDirectoryNode" />
+              <item name=".catkin_tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catkin_ws_user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catkin_ws_user" type="462c0819:PsiDirectoryNode" />
+              <item name=".catkin_tools" type="462c0819:PsiDirectoryNode" />
+              <item name="odroid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catkin_ws_user" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catkin_ws_user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d615f4fb-001f-44fc-a5f8-8bc2b4e37d9b" name="Default" comment="" />
+      <created>1511776055585</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1511776055585</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="452" width="1920" height="1051" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.catkin_tools/odroid/build.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.catkin_tools/odroid/config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/odroid-build/auto_stop_usr/catkin/catkin_generated/version/package.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

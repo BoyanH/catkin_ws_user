@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>task05_steering_calibration</name>
+  <name>task04_steering_calibration</name>
   <version>0.0.0</version>
   <description>The task05_steering_calibration package</description>
 
