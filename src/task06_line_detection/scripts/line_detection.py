@@ -14,6 +14,7 @@ bridge = CvBridge()
 rgb_bw_pub = None
 hsv_bw_pub = None
 yuv_bw_pub = None
+with_lines_pub = None
 
 max_iterations = 100
 
@@ -21,6 +22,11 @@ def publish_img(img, publisher):
     transport_img = bridge.cv2_to_imgmsg(img, "rgb8")
     publisher.publish(transport_img)
 
+def get_m_b(a, b):
+    m = (a[1] - b[1]) / (a[0] - b[0] + np.nextafter(0, 1))
+    b = a[1] - m * a[0]
+
+    return m, b
 
 def image_callback(img_msg):
     img_rgb = bridge.imgmsg_to_cv2(img_msg, "rgb8")
@@ -54,13 +60,9 @@ def image_callback(img_msg):
     publish_img(res_yuv, yuv_bw_pub)
 
     # TODO: vectorize
-    line_x = []
-    line_y = []
-    for x, row in enumerate(mask_hsv):
-        for y, cell in enumerate(row):
-            if cell != 0:
-                line_x.append(x)
-                line_y.append(y)
+    white_points = np.where(np.array(mask_hsv))
+    line_x = white_points[1]
+    line_y = white_points[0]
 
     # find_lines(line_points)
 
@@ -68,38 +70,46 @@ def image_callback(img_msg):
 
     line_x = np.matrix(line_x).reshape(-1,1)
     line_y = np.array(line_y)
-    ra = linear_model.RANSACRegressor(stop_n_inliers=len(line_x)*0.3, )
+    ra = linear_model.RANSACRegressor(stop_n_inliers=len(line_x)*0.4, max_trials=200, residual_threshold=50)
     ra.fit(line_x, line_y)
 
-    line_X = np.arange(np.array(line_x).min(), np.array(line_x).max()).reshape(-1,1)
-    line_y_ransac = ra.predict(line_X)
-
     inverted_inliers_mask = np.invert(ra.inlier_mask_)
+    inliers_first_X = line_x[ra.inlier_mask_]
     outliers_first_X = line_x[inverted_inliers_mask]
     outliers_first_y = line_y[inverted_inliers_mask]
 
-    ra2 = linear_model.RANSACRegressor(stop_n_inliers=len(outliers_first_X)*0.6)
+    ra2 = linear_model.RANSACRegressor(stop_n_inliers=len(outliers_first_X)*0.8, max_trials=200, residual_threshold=50)
     ra2.fit(outliers_first_X, outliers_first_y)
-    line_X2 = np.arange(np.array(outliers_first_X).min(), np.array(outliers_first_X).max()).reshape(-1, 1)
-    line_y_ransac2 = ra2.predict(line_X2)
-    fig, ax = plt.subplots()
 
-    ax.plot(line_X, line_y_ransac, color='cornflowerblue', linewidth=10,
-             label='RANSAC regressor')
-    ax.plot(line_X2, line_y_ransac2, color='cornflowerblue', linewidth=10,
-             label='RANSAC regressor')
+    if len(np.where(ra2.inlier_mask_)[0]) < len(outliers_first_X)*0.6:
+        return
 
-    plt.show()
+    first_a = (inliers_first_X.min(), ra.predict(inliers_first_X.min()))
+    first_b = (inliers_first_X.max(), ra.predict(inliers_first_X.max()))
+
+    second_a = (outliers_first_X.min(), ra2.predict(outliers_first_X.min()))
+    second_b = (outliers_first_X.max(), ra2.predict(outliers_first_X.max()))
+
+    m1, b1 = get_m_b(first_a, first_b)
+    m2, b2 = get_m_b(second_a, second_b)
+
+    img_with_lines = cv2.line(img_rgb, first_a, first_b, (255,0,0))
+    img_with_lines = cv2.line(img_with_lines, second_a, second_b, (255,0,0))
+
+    publish_img(img_with_lines, with_lines_pub)
+
+    # plt.show()
 
 
 def init():
-    global rgb_bw_pub, hsv_bw_pub, yuv_bw_pub
+    global rgb_bw_pub, hsv_bw_pub, yuv_bw_pub, with_lines_pub
 
     rospy.init_node('line_detector', anonymous=True)
     rospy.Subscriber('/app/camera/rgb/image_raw', Image, image_callback)
     rgb_bw_pub = rospy.Publisher('/img/binarized/rgb', Image, queue_size=10)
     hsv_bw_pub = rospy.Publisher('/img/binarized/hsv', Image, queue_size=10)
     yuv_bw_pub = rospy.Publisher('/img/binarized/yuv', Image, queue_size=10)
+    with_lines_pub = rospy.Publisher('/img/with/lines', Image, queue_size=10)
     rospy.spin()
 
 if __name__ == '__main__':
@@ -131,23 +141,6 @@ if __name__ == '__main__':
 
 
 
-
-
-def find_lines(data):
-    for i in range(max_iterations):
-        a, b = random.sample(data, k=2)
-        rospy.loginfo(a)
-
-        # y = mx + b
-        # a_x*m + b = a_y
-        # b_x*m + b = b_y
-        # a_x*m - b_x*m = a_y - b_y
-        # m = (a_y - b_y)/(a_x - b_x)
-        # rospy.loginfo(a)
-
-        m = (a[1] - b[1])/(a[0] - b[0] + np.nextafter(0, 1))
-        b = a[1] - m*a[0]
-        rospy.loginfo("y = {}x + {}".format(m ,b))
 
 def find_intercept_point(m, b, point):
     x = (point[0] + m * point[1] - m * b) / (1 + m ** 2)
