@@ -37,7 +37,7 @@ def publish_img(img, publisher):
 
 
 def mirror_coords(coords, max_x, max_y):
-    return [[max_x - x, max_y - y] for x, y in coords]
+    return np.array([[max_x - x, max_y - y] for x, y in coords])
 
 
 def get_img_coords(img_msg):
@@ -168,11 +168,13 @@ def get_dists_coords_and_angles(img_msg):
     distances = distance_green, distance_blue, distance_red, distance_purple
     coordinates = [real_coords_green, real_coords_blue, real_coords_red, real_coords_purple]
 
-    angle_g_c_p = get_angle_between_points_and_center(img_coords_green, center, img_coords_purple)
-    angles = [angle_g_c_b, angle_g_c_p]
+    angles = [vec_to_angle(img_coords_green - center), vec_to_angle(img_coords_red - center),
+              vec_to_angle(img_coords_blue - center), vec_to_angle(img_coords_purple - center)]
 
     return distances, coordinates, angles
 
+def vec_to_angle(x):
+    return np.arctan2(x[1], x[0])
 
 def get_angle_between_points_and_center(a, center, b, ):
     a_vec = np.array(a) - np.array(center)
@@ -221,14 +223,21 @@ def image_callback(scan_msg):
 
     (x, y) = np.linalg.lstsq(a, b)[0]
 
-    rospy.loginfo('x: {}; y: {}'.format(x, y))
+    # rospy.loginfo('x: {}; y: {}'.format(x, y))
 
-    # TODO: magic
-    yaw = angles[0]
+    # in order to know which angle we have we need to look at multiple ones, otherwise we can't see any
+    # difference between angles of e.g 90 and 270
+    # here we look at the mean angle from all
+    get_yaw = lambda x: np.arctan2(np.sin(x).sum(), np.cos(x).sum())
+    angles = np.array([vec_to_angle(np.array(coord) - np.array(x, y)) + angle
+                       for angle, coord in list(zip(angles, coords))])
+    yaw = get_yaw(angles) - np.pi/2
+
+    # rospy.loginfo('yaw: {}'.format(yaw * 180 / np.pi))
 
     yaw_quaternion = yaw_to_quaternion(yaw)
     odometry = Odometry()
-    odometry.header.frame_id = 'map'
+    odometry.header.frame_id = 'odom'
     odometry.header.seq = scan_msg.header.seq
     odometry.pose.pose.position.x = x
     odometry.pose.pose.position.y = y
