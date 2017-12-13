@@ -238,6 +238,7 @@ def image_callback(scan_msg):
     odometry.pose.pose.position.x = x
     odometry.pose.pose.position.y = y
     odometry.pose.pose.orientation = yaw_quaternion
+    odometry.header.stamp = rospy.Time.now()
 
     odom_pub.publish(odometry)
 
