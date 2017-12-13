@@ -141,11 +141,14 @@ def get_img_coords(img_msg):
                          len(img_hsv[0]), len(img_hsv))
 
 
-def get_dists_coords_and_angles(img_msg):
+def get_dists_coords_and_yaw(img_msg):
     img_coords_green, img_coords_red, img_coords_blue, img_coords_purple, center = get_img_coords(img_msg)
     real_coords_green, real_coords_red, real_coords_blue, real_coords_purple = np.array(
         [[2.29, 1.14], [3.55, 3.03], [4.18, 1.77], [2.29, 2.4]]
     )
+
+    img_coords = np.array([img_coords_green, img_coords_red, img_coords_blue, img_coords_purple])
+    real_coords = np.array([real_coords_green, real_coords_red, real_coords_blue, real_coords_purple])
 
     angle_g_c_b = get_angle_between_points_and_center(img_coords_green, center, img_coords_blue)
     angle_c_g_b = get_angle_between_points_and_center(center, img_coords_green, img_coords_blue)
@@ -168,13 +171,20 @@ def get_dists_coords_and_angles(img_msg):
     distances = distance_green, distance_blue, distance_red, distance_purple
     coordinates = [real_coords_green, real_coords_blue, real_coords_red, real_coords_purple]
 
-    angles = [vec_to_angle(img_coords_green - center), vec_to_angle(img_coords_red - center),
-              vec_to_angle(img_coords_blue - center), vec_to_angle(img_coords_purple - center)]
+    coords_count = len(img_coords)
+    yaw_angles = []
+    for i in range(coords_count):
+        for j in range(i+1, coords_count):
+            vector_real_world = real_coords[i] - real_coords[j]
+            vector_image = img_coords[i] - img_coords[j]
+            yaw_angles.append(get_angle_between_vectors(vector_image, vector_real_world))
 
-    return distances, coordinates, angles
+    return distances, coordinates, np.array(yaw_angles).mean() + np.pi/2
 
-def vec_to_angle(x):
-    return np.arctan2(x[1], x[0])
+def get_angle_between_vectors(vec_1, vec_2):
+    dot_product = vec_1.dot(vec_2)
+    det = np.linalg.det(np.array([vec_1, vec_2]))
+    return np.arctan2(det, dot_product)
 
 def get_angle_between_points_and_center(a, center, b, ):
     a_vec = np.array(a) - np.array(center)
@@ -207,7 +217,7 @@ def get_distance_to_cluster(mean_color, expected_color):
 
 
 def image_callback(scan_msg):
-    distances, coords, angles = get_dists_coords_and_angles(scan_msg)
+    distances, coords, yaw = get_dists_coords_and_yaw(scan_msg)
 
     dist_1 = distances[0]
     x_1, y_1 = coords[0]
@@ -223,15 +233,7 @@ def image_callback(scan_msg):
 
     (x, y) = np.linalg.lstsq(a, b)[0]
 
-    # rospy.loginfo('x: {}; y: {}'.format(x, y))
-
-    # in order to know which angle we have we need to look at multiple ones, otherwise we can't see any
-    # difference between angles of e.g 90 and 270
-    # here we look at the mean angle from all
-    get_yaw = lambda x: np.arctan2(np.sin(x).sum(), np.cos(x).sum())
-    angles = np.array([vec_to_angle(np.array(coord) - np.array(x, y)) + angle
-                       for angle, coord in list(zip(angles, coords))])
-    yaw = get_yaw(angles) - np.pi/2
+    # rospy.loginfo('yaw: {}'.format(yaw * 180 / np.pi))
 
     # rospy.loginfo('yaw: {}'.format(yaw * 180 / np.pi))
 
