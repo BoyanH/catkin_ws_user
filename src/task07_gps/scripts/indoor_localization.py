@@ -8,10 +8,7 @@ from geometry_msgs.msg import Quaternion
 from nav_msgs.msg import Odometry
 from cv_bridge import CvBridge, CvBridgeError
 from sklearn.cluster import KMeans
-import random
 import math
-from matplotlib import pyplot as plt
-
 bridge = CvBridge()
 
 number_of_clusters = 4
@@ -23,6 +20,7 @@ red_dots_pub = None
 blue_dots_pub = None
 all_dots_pub = None
 recognized_pub = None
+
 odom_pub = None
 
 weight_h = 7
@@ -113,11 +111,8 @@ def get_img_coords(img_msg):
     for idx, label in enumerate(clustered.labels_):
         points_per_cluster[label].append(masked_points_coordinates[idx])
 
-    # mean_colors_per_cluster = np.vectorize(lambda x: get_mean_color(x, img_hsv),
-    #                                        signature='(m)->(m)')(points_per_cluster)
     mean_colors_per_cluster = [get_mean_color(x, img_hsv) for x in points_per_cluster]
 
-    # TODO: get really precise expectancy colors
     red_expected_color = np.array([175, 190, 150])
     blue_expected_color = np.array([110, 230, 230])
     green_expected_color = np.array([50, 250, 100])
@@ -154,7 +149,6 @@ def get_dists_coords_and_yaw(img_msg):
     angle_c_g_b = get_angle_between_points_and_center(center, img_coords_green, img_coords_blue)
     angle_c_b_g = np.pi - angle_g_c_b - angle_c_g_b
 
-    # TODO: check if that is right with the vector divisions
     angle_r_c_p = get_angle_between_points_and_center(img_coords_red, center, img_coords_purple)
     angle_c_r_p = get_angle_between_points_and_center(center, img_coords_red, img_coords_purple)
     angle_c_p_r = np.pi - angle_r_c_p - angle_c_r_p
