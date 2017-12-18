@@ -11,9 +11,9 @@ odom_velocity = None
 odom_msg_queue = []
 last_kalman_odom = None
 
-w_sensory_x = 0.5
-w_sensory_y = 0.5
-w_sensory_yaw = 0.5
+w_sensory_x = 0.004
+w_sensory_y = 0.004
+w_sensory_yaw = 0.0
 
 
 def get_orientation_angle(quaternion):
@@ -45,14 +45,16 @@ def get_odom_velocity_and_yaw_change_speed():
     (x_last, y_last, yaw_last), t_last = unpack_msg(odom_last_msg)
     (x_crnt, y_crnt, yaw_crnt), t_current = unpack_msg(odom_current_msg)
 
+    # unpack latest 2 messages and get the velocity and yaw change speed from them
+    # for the velocity we get the euclidic distance travelled (x,y prev and current) for time time_passed
     pos_last = np.array([x_last, y_last])
     pos_current = np.array([x_crnt, y_crnt])
     distance = np.linalg.norm(pos_last - pos_current)
     time_passed = (t_last - t_current).to_nsec() * 1.0
     velocity = distance / time_passed
     yaw_diff = (yaw_crnt - yaw_last)
-    # rospy.loginfo('current: {}; last: {}; difference: {}'.format(yaw_crnt, yaw_last, yaw_crnt - yaw_last))
 
+    # remember to map the yaw difference back into -np.pi/np.pi space
     if yaw_diff < -np.pi:
         yaw_diff = 2 * np.pi + yaw_diff
     elif yaw_diff > np.pi:
@@ -60,12 +62,13 @@ def get_odom_velocity_and_yaw_change_speed():
 
     yaw_change_speed = yaw_diff / time_passed
 
-    return velocity, -yaw_change_speed
+    return velocity, yaw_change_speed
 
 
 def odom_callback(odom_msg):
     global odom_msg_queue
 
+    # save the last message that was different from the already saved ones
     unpacked_messages = [unpack_msg(x) for x in odom_msg_queue]
     angles_in_queue = [x[0][2] for x in unpacked_messages]
     if (len(odom_msg_queue) > 0 and
@@ -82,6 +85,7 @@ def odom_gps_callback(odom_msg):
 
     odom_velocity, yaw_change_speed = get_odom_velocity_and_yaw_change_speed()
 
+    # if we don't have any odometry data, we can't really do anything else but return the gps position
     if odom_velocity is None or last_kalman_odom is None:
         kalman_odom = Odometry()
         kalman_odom.pose = odom_msg.pose
@@ -95,10 +99,15 @@ def odom_gps_callback(odom_msg):
 
     time_passed = (time_gps - last_k_time).to_nsec()
     velocity_time = odom_velocity * time_passed
+    # predict where we are going to be after time_passed time
+    # by knowing how much x, y and yaw change per time unit
+    # for x and y we only have speed, but we can calculate how much they change assuming
+    # we are moving on a circle with angle last_k_yaw
     predicted_x = last_k_x + np.cos(last_k_yaw) * velocity_time
     predicted_y = last_k_y + np.sin(last_k_yaw) * velocity_time
     predicted_yaw = last_k_yaw + (yaw_change_speed * time_passed)
 
+    # use the weighted sum of predicted (odometry) and gps as final result
     kalman_x = w_sensory_x * x_gps + ((1 - w_sensory_x) * predicted_x)
     kalman_y = w_sensory_y * y_gps + ((1 - w_sensory_y) * predicted_y)
     kalman_yaw = w_sensory_yaw * yaw_gps + ((1 - w_sensory_yaw) * predicted_yaw)
@@ -117,6 +126,9 @@ def odom_gps_callback(odom_msg):
 
 def init():
     global odom_kalman_pub
+
+    # we wait for odom and odom_gps messages. The odom ones we just save and on odom_callback we predict and
+    # publish new position
 
     rospy.init_node('kalman_filter_v1', anonymous=True)
     rospy.Subscriber('/odom_gps', Odometry, odom_gps_callback)

@@ -59,6 +59,7 @@ def get_img_coords(img_msg):
     upper_purple = np.array([170, 255, 255])
 
     # Get masks
+    # for regions on image which have the same color as one of the lamps
     mask_red = cv2.inRange(img_hsv, lower_red, upper_red)
     mask_red = cv2.medianBlur(mask_red, 3)
     mask_red2 = cv2.inRange(img_hsv, lower_red2, upper_red2)
@@ -74,6 +75,7 @@ def get_img_coords(img_msg):
     mask_purple = cv2.inRange(img_hsv, lower_purple, upper_purple)
     mask_purple = cv2.medianBlur(mask_purple, 3)
 
+    # combine masks
     mask_all = np.bitwise_or(np.bitwise_or(np.bitwise_or(mask_red, mask_green), mask_blue), mask_purple)
 
     selected_red = cv2.bitwise_and(img_rgb, img_rgb, mask=mask_red)
@@ -100,6 +102,13 @@ def get_img_coords(img_msg):
     #           for cluster 2 also, for cluster 3 also...]
     # -> get min value from array -> this cluster is our winner -> get mean coordinates
 
+
+    # using all the pixels which match with the color of any lamp, we can then cluster them all
+    # and for each lamp in the real world pick the best fit from a cluster (cluster with mean color that best
+    # fits the desired one) and return the mean x,y position of the cluster as location
+
+    # !IMPORTANT: here we also use weights for h,s,v to determine how "close" one colour is to another
+
     masked_pixels = np.where(np.array(mask_all))
     # get all (x,y) pair of coordinates in a 2d array (matrix)
     masked_points_coordinates = np.array(list(zip(masked_pixels[1], masked_pixels[0])))
@@ -116,7 +125,6 @@ def get_img_coords(img_msg):
     red_expected_color = np.array([175, 190, 150])
     blue_expected_color = np.array([110, 230, 230])
     green_expected_color = np.array([50, 250, 100])
-    # green_expected_color = np.array([70, 100, 100])
     purple_expected_color = np.array([140, 190, 255])
 
     img_coords_red = get_image_coords(mean_colors_per_cluster, points_per_cluster, red_expected_color)
@@ -145,6 +153,11 @@ def get_dists_coords_and_yaw(img_msg):
     img_coords = np.array([img_coords_green, img_coords_red, img_coords_blue, img_coords_purple])
     real_coords = np.array([real_coords_green, real_coords_red, real_coords_blue, real_coords_purple])
 
+    # calculate all required angles from the image (should be same as in the real world)
+    # so that we can calculate the distance to each lamp (using the distance between each two lamp,
+    # can be calculated with euclidic distance formula as the coordinates in real world are known to us)
+
+
     angle_g_c_b = get_angle_between_points_and_center(img_coords_green, center, img_coords_blue)
     angle_c_g_b = get_angle_between_points_and_center(center, img_coords_green, img_coords_blue)
     angle_c_b_g = np.pi - angle_g_c_b - angle_c_g_b
@@ -165,6 +178,10 @@ def get_dists_coords_and_yaw(img_msg):
     distances = distance_green, distance_blue, distance_red, distance_purple
     coordinates = [real_coords_green, real_coords_blue, real_coords_red, real_coords_purple]
 
+    # we know coordinates in real world of each lamp and in the image
+    # present each pair of lamps as a vector and calculate the angle between the real worlds
+    # coordinates vector and the image coordinates vector
+
     coords_count = len(img_coords)
     yaw_angles = []
     for i in range(coords_count):
@@ -173,7 +190,12 @@ def get_dists_coords_and_yaw(img_msg):
             vector_image = img_coords[i] - img_coords[j]
             yaw_angles.append(get_angle_between_vectors(vector_image, vector_real_world))
 
-    return distances, coordinates, np.array(yaw_angles).mean() + np.pi/2
+    yaw = np.array(yaw_angles).mean() + np.pi/2
+
+    if yaw > np.pi:
+        yaw = -2*np.pi + yaw
+
+    return distances, coordinates, yaw
 
 def get_angle_between_vectors(vec_1, vec_2):
     dot_product = vec_1.dot(vec_2)
@@ -213,6 +235,10 @@ def get_distance_to_cluster(mean_color, expected_color):
 def image_callback(scan_msg):
     distances, coords, yaw = get_dists_coords_and_yaw(scan_msg)
 
+    # using the distances to each lamp and the coordinates of each lamp in the real world
+    # then, having distance and using the formula for euclidic distance
+    # we can use least squares to fit the best x,y coordinates
+
     dist_1 = distances[0]
     x_1, y_1 = coords[0]
 
@@ -226,10 +252,6 @@ def image_callback(scan_msg):
          dist_coords_k])
 
     (x, y) = np.linalg.lstsq(a, b)[0]
-
-    # rospy.loginfo('yaw: {}'.format(yaw * 180 / np.pi))
-
-    # rospy.loginfo('yaw: {}'.format(yaw * 180 / np.pi))
 
     yaw_quaternion = yaw_to_quaternion(yaw)
     odometry = Odometry()
