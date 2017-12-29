@@ -11,8 +11,9 @@ from sensor_msgs.msg import Image
 from geometry_msgs.msg import Quaternion
 from nav_msgs.msg import Odometry
 from visualization_msgs.msg import MarkerArray, Marker
-from helpers import yaw_to_quaternion, get_orientation_angle, normalize_angle, lv_sample
+from helpers import yaw_to_quaternion, get_orientation_angle, normalize_angle, lv_sample, get_angle_difference
 from beacons import get_lamp_coords
+from odom import get_odom_velocity_and_yaw_change_speed
 import math
 
 # debugging publishers
@@ -25,6 +26,7 @@ recognized_pub = None
 
 marker_array_pub = None
 odom_pub = None
+last_pos_and_orientation = None
 
 # measured from real world field, this is the size of the carpet/track
 field_x_size = 6.016
@@ -35,9 +37,32 @@ real_coords = np.array([[3.55, 3.03], [4.18, 1.77], [2.29, 1.14], [2.29, 2.4]])
 
 x_noise_size = math.sqrt(0.0001)
 y_noise_size = math.sqrt(0.0001)
-yaw_noise_size = math.sqrt(np.pi / 128)
+yaw_noise_size = math.sqrt(np.pi / 256)
 
-angle_measurement_var_sq = np.pi ** 2
+# copied from console, the logs of a measured angle (I think it was for red, but doesn't matter anyways)
+# measured in the beginning of the bag file while the car still doesn't move
+# we could do this in code, but wanted to save some time
+# Note for submission: value used is 9.8823559825076556e-12 ^^
+# angle_measurement_var = np.var(np.array([
+#     -0.87893677600343323,
+#     -0.87893677600343323,
+#     -0.88289247655971048,
+#     -0.88072588025077903,
+#     -0.88072588025077903,
+#     -0.88289247655971048,
+#     -0.88072588025077903,
+#     -0.87893677600343323,
+#     -0.88072588025077903,
+#     -0.88506681588861058,
+#     -0.88072588025077903,
+#     -0.87893677600343323,
+#     -0.88072588025077903,
+#     -0.87893677600343323,
+#     -0.87893677600343323
+# ]))
+
+# work best, for 0.2 radians difference gives a weight of 94.6
+angle_measurement_var_sq = (np.pi / 4) ** 2
 
 odom_msg_queue = []
 marker_array = None
@@ -60,19 +85,16 @@ def rotate_vector(vector, angle):
     return rot_matrix.dot(vector)
 
 
-def create_n_markers(n, x, y, yaw_quaternion, id):
+def create_n_markers(n, x, y, yaw_quaternion, id, mean_weight):
     markers = [None] * n
 
     markers[0] = create_marker(x, y, yaw_quaternion, id)
-
     for i in range(1, n):
-        new_x = x + (np.random.random_sample() - 0.5) * x_noise_size * 1
-        new_y = y + (np.random.random_sample() - 0.5) * y_noise_size * 1
-        new_yaw = yaw_to_quaternion(
-            normalize_angle(
-                get_orientation_angle(yaw_quaternion) + (np.random.random_sample() - 0.5) * yaw_noise_size * 1))
-
-        markers[i] = create_marker(new_x, new_y, new_yaw, id + i)
+        x_new = x + (np.random.random_sample() - 0.5) * x_noise_size * (1 - mean_weight) * 10
+        y_new = y + (np.random.random_sample() - 0.5) * y_noise_size * (1 - mean_weight) * 10
+        yaw_new = get_orientation_angle(yaw_quaternion) + (np.random.random_sample() - 0.5) * yaw_noise_size * (
+        1 - mean_weight) * 2
+        markers[i] = create_marker(x_new, y_new, yaw_to_quaternion(yaw_new), id + i)
 
     return markers
 
@@ -128,50 +150,13 @@ def get_seen_angles(img_msg):
     img_coords_center = get_lamp_coords(img_msg, publishers)
 
     seen_angles = [get_angle_between_vectors(coord - img_coords_center[-1],
-                                             (0, 1)) for coord in img_coords_center[:-1]]
+                                             np.array([0, 1])) for coord in img_coords_center[:-1]]
 
     return seen_angles
 
 
-def get_x_y_orientation(odom_msg):
-    pose = odom_msg.pose.pose
-    position = pose.position
-    orientation = pose.orientation
-
-    return position.x, position.y, get_orientation_angle(orientation)
-
-
-def unpack_msg(odom_msg):
-    return get_x_y_orientation(odom_msg), odom_msg.header.stamp
-
-
-def get_odom_velocity_and_yaw_change_speed():
-    if len(odom_msg_queue) != 2:
-        return None, None
-
-    odom_last_msg, odom_current_msg = odom_msg_queue
-    (x_last, y_last, yaw_last), t_last = unpack_msg(odom_last_msg)
-    (x_crnt, y_crnt, yaw_crnt), t_current = unpack_msg(odom_current_msg)
-
-    pos_last = np.array([x_last, y_last])
-    pos_current = np.array([x_crnt, y_crnt])
-    distance = np.linalg.norm(pos_last - pos_current)
-    time_passed = (t_last - t_current).to_nsec() * 1.0
-    velocity = distance / time_passed
-    yaw_diff = (yaw_crnt - yaw_last)
-
-    if yaw_diff < -np.pi:
-        yaw_diff = 2 * np.pi + yaw_diff
-    elif yaw_diff > np.pi:
-        yaw_diff = -2 * np.pi + yaw_diff
-
-    yaw_change_speed = yaw_diff / time_passed
-
-    return velocity, yaw_change_speed
-
-
 def propagate(time_passed):
-    odom_velocity, yaw_change_speed = get_odom_velocity_and_yaw_change_speed()
+    odom_velocity, yaw_change_speed = get_odom_velocity_and_yaw_change_speed(odom_msg_queue)
     velocity_time = odom_velocity * time_passed
     yaw_time = yaw_change_speed * time_passed
 
@@ -192,21 +177,25 @@ def propagate(time_passed):
 def get_marker_weights(img_msg):
     # seen_red, seen_blue, seen_green, seen_purple
     seen_angles = get_seen_angles(img_msg)
-    rospy.loginfo(seen_angles)
     marker_weights = []
 
     for i, marker in enumerate(marker_array.markers):
+        # get angle between the vector pointing straight in from the position of a marker
+        # towards its orientation and the vector from the marker to a beacon/light bulb
+
         marker_yaw = get_orientation_angle(marker.pose.orientation)
         marker_coords = marker.pose.position.x, marker.pose.position.y
         marker_orientation = marker_yaw + np.pi
-        marker_orientation_vector = rotate_vector((0, 1), marker_orientation)
+        marker_orientation_vector = rotate_vector(np.array([0, 1]), marker_orientation)
         expected_angles = [get_angle_between_vectors(rc - marker_coords,
                                                      marker_orientation_vector) for rc in real_coords]
 
         # calculate weight for each light bulb using e^(- (expected - perceived)^2/standardDeviation^2)
         weights = np.array([np.exp(
-            -(normalize_angle(expected - perceived)) ** 2 / angle_measurement_var_sq
+            -0.5 * ((get_angle_difference(expected, perceived)) / angle_measurement_var_sq) ** 2
         ) for expected, perceived in list(zip(expected_angles, seen_angles))])
+
+        # rospy.loginfo('e: {}; s: {}; w: {}'.format(expected_angles, seen_angles, weights))
 
         # remove NaN weights for unseen light bulbs
         weights = weights[np.invert(np.isnan(weights))]
@@ -215,14 +204,68 @@ def get_marker_weights(img_msg):
         marker_weights.append(weights.prod())
 
     marker_weights = np.array(marker_weights)
+    mean_weight = marker_weights.mean()
     # normalize between 0 and 1
     marker_weights = marker_weights / marker_weights.sum()
 
-    return marker_weights
+    return marker_weights, mean_weight
+
+
+def get_most_probable_markers(img_msg):
+    marker_weights, mean_weight = get_marker_weights(img_msg)
+
+    for marker in marker_array.markers:
+        marker.color.a = 0
+
+    sampled_elements, sampled_weights = lv_sample(marker_array.markers, marker_weights, 20)
+
+    return sampled_elements, sampled_weights, mean_weight
+
+
+def next_marker_evolution(sampled_elements, sampled_weights, mean_weight):
+    marker_array.markers = list(np.array([create_n_markers(5, s.pose.position.x, s.pose.position.y,
+                                                           s.pose.orientation, s.id + i, mean_weight) for i, s in
+                                          enumerate(sampled_elements)]).flatten())
+
+
+def get_pos_and_orientation(markers):
+    # grid size is size of field * 10, so in decimeters, double field to allow overflows
+    grid = np.zeros((int(field_x_size * 20), int(field_y_size * 20)))
+
+    # matrix, where for each location we have a 2d matrix, where the rows are the
+    # individual positions, both with x and y
+    # that way, we can easily find the center of gravity with center_of_gravity.mean(axis=2)
+    # we defined 100 possible locations, will later on remove the unused ones
+    centers_of_gravity = np.zeros((grid.shape[0], grid.shape[1], 100, 2))
+    # fill matrix with NaN so we can filter it later on
+    centers_of_gravity = centers_of_gravity * float('inf')
+    yaw_cos = 0
+    yaw_sin = 0
+
+    for marker in markers:
+        x = marker.pose.position.x
+        y = marker.pose.position.y
+        yaw = get_orientation_angle(marker.pose.orientation)
+
+        x_idx = int(x * 10)
+        y_idx = int(y * 10)
+
+        if 0 <= x_idx < grid.shape[0] and 0 <= y_idx < grid.shape[1]:
+            grid[x_idx][y_idx] += 1
+            centers_of_gravity[x_idx][y_idx] = x, y
+            yaw_cos += np.cos(yaw)
+            yaw_sin += np.sin(yaw)
+
+    winning_cell = np.unravel_index(grid.argmax(), grid.shape)
+
+    x, y = centers_of_gravity[winning_cell].mean(0)
+    yaw = np.arctan2(yaw_sin, yaw_cos)
+
+    return x, y, yaw
 
 
 def image_callback(img_msg):
-    global last_image_cb_stamp
+    global last_image_cb_stamp, last_pos_and_orientation
 
     if marker_array is None:
         last_image_cb_stamp = img_msg.header.stamp
@@ -234,21 +277,18 @@ def image_callback(img_msg):
 
     time_passed = (img_msg.header.stamp - last_image_cb_stamp).to_nsec() * 1.0
     propagate(time_passed)
-    marker_weights = get_marker_weights(img_msg)
-
-    for marker in marker_array.markers:
-        marker.color.a = 0
-
-    sampled_elements, sampled_weights = lv_sample(marker_array.markers, marker_weights, 20)
-
-    marker_array.markers = list(np.array([create_n_markers(5, s.pose.position.x, s.pose.position.y,
-                                                           s.pose.orientation, s.id + i) for i, s in
-                                          enumerate(sampled_elements)]).flatten())
+    # TODO: maybe use marker_weights to determine when alg. converges
+    sample_markers, sample_weights, mean_weight = get_most_probable_markers(img_msg)
+    x, y, yaw = get_pos_and_orientation(sample_markers)
+    next_marker_evolution(sample_markers, sample_weights, mean_weight)
     marker_array_pub.publish(marker_array)
+    last_image_cb_stamp = img_msg.header.stamp
 
-    x = 1
-    y = 1
-    yaw = 0
+    if last_pos_and_orientation is None:
+        last_pos_and_orientation = x, y, yaw
+        return
+
+    # rospy.loginfo('x: {}; y: {}'.format(x, y))
 
     yaw_quaternion = yaw_to_quaternion(yaw)
     odometry = Odometry()
@@ -260,7 +300,6 @@ def image_callback(img_msg):
     odometry.header.stamp = rospy.Time.now()
 
     odom_pub.publish(odometry)
-    last_image_cb_stamp = img_msg.header.stamp
 
 
 def odom_callback(odom_msg):
@@ -272,7 +311,8 @@ def odom_callback(odom_msg):
         time_passed = abs((current_stamp - last_stamp).to_nsec())
 
         if time_passed < 0.2 * 10 ** 9:
-            # got ya, giving me the same message again...
+            # if we take messages too often, position and angle doesn't change
+            # at all, so it's hard to estimate next position
             return
 
     odom_msg_queue = [odom_msg] + odom_msg_queue
