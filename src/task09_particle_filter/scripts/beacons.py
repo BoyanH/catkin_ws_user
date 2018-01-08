@@ -165,4 +165,4 @@ def get_mean_color(coordinates, img):
 
 
 def mirror_coords(coords, max_x, max_y):
-    return np.array([[max_x - x, max_y - y] if x != inf else none_coords for x, y in coords])
+    return np.array([[max_x - x, y] if x != inf else none_coords for x, y in coords])

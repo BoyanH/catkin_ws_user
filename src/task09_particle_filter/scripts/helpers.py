@@ -35,16 +35,16 @@ def lv_sample(elements, weights, k):
     el_idx = -1
 
     for m in range(M):
-        new_weight = r + (1.0/M) * m
+        new_weight = r + m * (1.0/M)
 
         while weights_sum < new_weight:
-            weights_sum += weights[el_idx]
             el_idx += 1
+            weights_sum += weights[el_idx]
 
-        i = el_idx % len(elements)
+        # i = el_idx % len(elements)
 
-        sampled.append(elements[i])
-        sampled_weights.append(weights[i])
+        sampled.append(elements[el_idx])
+        sampled_weights.append(weights[el_idx])
 
     # should converge to the percentage of particles sampled
     # rospy.loginfo('ow: {}; sw: {}'.format(np.array(weights).sum(), np.array(sampled_weights).sum()))

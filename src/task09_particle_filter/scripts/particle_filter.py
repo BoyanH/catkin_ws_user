@@ -35,38 +35,17 @@ field_y_size = 4.01
 # real_coords_red, real_coords_blue, real_coords_green, real_coords_purple
 real_coords = np.array([[3.55, 3.03], [4.18, 1.77], [2.29, 1.14], [2.29, 2.4]])
 
-x_noise_size = math.sqrt(0.0001)
-y_noise_size = math.sqrt(0.0001)
-yaw_noise_size = math.sqrt(np.pi / 256)
+x_noise_size = 0.0001
+y_noise_size = 0.0001
+yaw_noise_size = np.pi / 128
 
-# copied from console, the logs of a measured angle (I think it was for red, but doesn't matter anyways)
-# measured in the beginning of the bag file while the car still doesn't move
-# we could do this in code, but wanted to save some time
-# Note for submission: value used is 9.8823559825076556e-12 ^^
-# angle_measurement_var = np.var(np.array([
-#     -0.87893677600343323,
-#     -0.87893677600343323,
-#     -0.88289247655971048,
-#     -0.88072588025077903,
-#     -0.88072588025077903,
-#     -0.88289247655971048,
-#     -0.88072588025077903,
-#     -0.87893677600343323,
-#     -0.88072588025077903,
-#     -0.88506681588861058,
-#     -0.88072588025077903,
-#     -0.87893677600343323,
-#     -0.88072588025077903,
-#     -0.87893677600343323,
-#     -0.87893677600343323
-# ]))
 
 # work best, for 0.2 radians difference gives a weight of 94.6
-angle_measurement_var_sq = (np.pi / 4) ** 2
+angle_measurement_var_sq = np.pi / 8
 
 odom_msg_queue = []
 marker_array = None
-last_image_cb_stamp = None
+odom_cb_stamp = None
 
 
 def get_angle_between_vectors(vec_1, vec_2):
@@ -89,11 +68,13 @@ def create_n_markers(n, x, y, yaw_quaternion, id, mean_weight):
     markers = [None] * n
 
     markers[0] = create_marker(x, y, yaw_quaternion, id)
+    # adaptive noise, should shrink with iterations
+    noise_factor = (1 - mean_weight)
     for i in range(1, n):
-        x_new = x + (np.random.random_sample() - 0.5) * x_noise_size * (1 - mean_weight) * 10
-        y_new = y + (np.random.random_sample() - 0.5) * y_noise_size * (1 - mean_weight) * 10
+        x_new = x + (np.random.random_sample() - 0.5) * x_noise_size * noise_factor
+        y_new = y + (np.random.random_sample() - 0.5) * y_noise_size * noise_factor
         yaw_new = get_orientation_angle(yaw_quaternion) + (np.random.random_sample() - 0.5) * yaw_noise_size * (
-        1 - mean_weight) * 2
+            noise_factor)
         markers[i] = create_marker(x_new, y_new, yaw_to_quaternion(yaw_new), id + i)
 
     return markers
@@ -183,19 +164,32 @@ def get_marker_weights(img_msg):
         # get angle between the vector pointing straight in from the position of a marker
         # towards its orientation and the vector from the marker to a beacon/light bulb
 
-        marker_yaw = get_orientation_angle(marker.pose.orientation)
+
+        marker_yaw = get_orientation_angle(marker.pose.orientation) + np.pi
         marker_coords = marker.pose.position.x, marker.pose.position.y
-        marker_orientation = marker_yaw + np.pi
+
+        # yaw = 180; marker_yaw = 360 -> don't rotate
+        # yaw = -180; marker_yaw = 0 -> don't rotate
+        # direction forwards is between -180 and 180 (as we remember, hope this is correct)
+        #
+        #
+        #         ^
+        #         | marker_orientation_vector
+        #         |
+        #       Auto
+        #
+
+        marker_orientation = marker_yaw
         marker_orientation_vector = rotate_vector(np.array([0, 1]), marker_orientation)
         expected_angles = [get_angle_between_vectors(rc - marker_coords,
                                                      marker_orientation_vector) for rc in real_coords]
 
         # calculate weight for each light bulb using e^(- (expected - perceived)^2/standardDeviation^2)
         weights = np.array([np.exp(
-            -0.5 * ((get_angle_difference(expected, perceived)) / angle_measurement_var_sq) ** 2
+            -((get_angle_difference(expected, perceived))**2 / angle_measurement_var_sq**2)
         ) for expected, perceived in list(zip(expected_angles, seen_angles))])
 
-        # rospy.loginfo('e: {}; s: {}; w: {}'.format(expected_angles, seen_angles, weights))
+        rospy.loginfo('e: {}; s: {}; w: {}'.format(expected_angles, seen_angles, weights))
 
         # remove NaN weights for unseen light bulbs
         weights = weights[np.invert(np.isnan(weights))]
@@ -213,11 +207,8 @@ def get_marker_weights(img_msg):
 
 def get_most_probable_markers(img_msg):
     marker_weights, mean_weight = get_marker_weights(img_msg)
-
-    for marker in marker_array.markers:
-        marker.color.a = 0
-
     sampled_elements, sampled_weights = lv_sample(marker_array.markers, marker_weights, 20)
+
 
     return sampled_elements, sampled_weights, mean_weight
 
@@ -265,24 +256,17 @@ def get_pos_and_orientation(markers):
 
 
 def image_callback(img_msg):
-    global last_image_cb_stamp, last_pos_and_orientation
-
-    if marker_array is None:
-        last_image_cb_stamp = img_msg.header.stamp
-        initialize_particle_cloud()
-        return marker_array_pub.publish(marker_array)
+    global last_pos_and_orientation
 
     if len(odom_msg_queue) != 2:
         return
 
-    time_passed = (img_msg.header.stamp - last_image_cb_stamp).to_nsec() * 1.0
-    propagate(time_passed)
+
     # TODO: maybe use marker_weights to determine when alg. converges
     sample_markers, sample_weights, mean_weight = get_most_probable_markers(img_msg)
     x, y, yaw = get_pos_and_orientation(sample_markers)
     next_marker_evolution(sample_markers, sample_weights, mean_weight)
     marker_array_pub.publish(marker_array)
-    last_image_cb_stamp = img_msg.header.stamp
 
     if last_pos_and_orientation is None:
         last_pos_and_orientation = x, y, yaw
@@ -303,7 +287,7 @@ def image_callback(img_msg):
 
 
 def odom_callback(odom_msg):
-    global odom_msg_queue
+    global odom_msg_queue, odom_cb_stamp
 
     if len(odom_msg_queue) > 0:
         last_stamp = odom_msg_queue[0].header.stamp
@@ -317,6 +301,17 @@ def odom_callback(odom_msg):
 
     odom_msg_queue = [odom_msg] + odom_msg_queue
     odom_msg_queue = odom_msg_queue[:2]
+
+    if odom_cb_stamp is None:
+        odom_cb_stamp = odom_msg.header.stamp
+
+    if marker_array is None:
+        initialize_particle_cloud()
+        return marker_array_pub.publish(marker_array)
+
+    time_passed = (odom_msg.header.stamp - odom_cb_stamp).to_nsec() * 1.0
+    propagate(time_passed)
+    odom_cb_stamp = odom_msg.header.stamp
 
 
 def init():
@@ -332,7 +327,7 @@ def init():
     blue_dots_pub = rospy.Publisher('/debug_image/blue', Image, queue_size=10)
     all_dots_pub = rospy.Publisher('/debug_image/all_colors', Image, queue_size=10)
     recognized_pub = rospy.Publisher('/debug_image/recognized', Image, queue_size=10)
-    odom_pub = rospy.Publisher('/odom_gps', Odometry, queue_size=10)
+    odom_pub = rospy.Publisher('/mcpf_gps', Odometry, queue_size=10)
     marker_array_pub = rospy.Publisher('/mcmarkerarray', MarkerArray, queue_size=10)
     rospy.spin()
 
