@@ -19,8 +19,8 @@ lane1_matrix = np.load(os.path.join(dir, './matrixDynamic_lane2.npy'))
 lane2_matrix = np.load(os.path.join(dir, './matrixDynamic_lane2.npy'))
 meter2res_factor = 10
 
-forward_speed = -150
-backward_speed = 150
+forward_speed = 350
+backward_speed = -350
 calibrated_forward_angle = 100
 
 kp = 4
@@ -33,7 +33,7 @@ def get_calibrated_steering(angle):
     ackerman_angles = [-45, 0, 45]
     steering_angles = [0, 100, 170]
 
-    return np.interp(angle, ackerman_angles, steering_calibration)
+    return np.interp(angle, ackerman_angles, steering_angles)
 
 
 def get_orientation_angle(quaternion):
@@ -93,8 +93,6 @@ def get_steering_speed_fxy_car_map(x, y, yaw):
 
     control_steering = get_calibrated_steering(np.array([steering * 180 / np.pi]))[0]
 
-    rospy.loginfo(control_steering)
-
     return control_steering, speed, f_x_car, f_y_car, f_x_map, f_y_map, steering
 
 
@@ -108,10 +106,10 @@ def kalman_callback(odom_msg):
     rospy.loginfo('in callback')
 
     # to plot circle
-    if first_run:
-        first_run = False
-    else:
-        return
+    # if first_run:
+    #     first_run = False
+    # else:
+    #     return
 
     x, y, yaw = unpack_msg(odom_msg)
 

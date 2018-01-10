@@ -293,7 +293,7 @@ def init():
     blue_dots_pub = rospy.Publisher('/debug_image/blue', Image, queue_size=10)
     all_dots_pub = rospy.Publisher('/debug_image/all_colors', Image, queue_size=10)
     recognized_pub = rospy.Publisher('/debug_image/recognized', Image, queue_size=10)
-    odom_pub = rospy.Publisher('/odomgps', Odometry, queue_size=10)
+    odom_pub = rospy.Publisher('/odom_gps', Odometry, queue_size=10)
     rospy.spin()
 
 
