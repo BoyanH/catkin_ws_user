@@ -93,6 +93,7 @@ def get_steering_speed_fxy_car_map(x, y, yaw):
 
     control_steering = get_calibrated_steering(np.array([steering * 180 / np.pi]))[0]
 
+
     return control_steering, speed, f_x_car, f_y_car, f_x_map, f_y_map, steering
 
 
