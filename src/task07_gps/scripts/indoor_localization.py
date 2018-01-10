@@ -239,6 +239,18 @@ def image_callback(scan_msg):
     # then, having distance and using the formula for euclidic distance
     # we can use least squares to fit the best x,y coordinates
 
+    distances = np.array(distances)
+    none_distances = np.isnan(distances)
+    found_distances = np.invert(none_distances)
+    distances = distances[found_distances]
+    coords = np.array(coords)[found_distances]
+
+    if len(distances) < 2:
+        rospy.loginfo('lamps got fucked up')
+        return
+
+    rospy.loginfo('or they didnt')
+
     dist_1 = distances[0]
     x_1, y_1 = coords[0]
 
@@ -263,6 +275,7 @@ def image_callback(scan_msg):
     odometry.header.stamp = rospy.Time.now()
 
     odom_pub.publish(odometry)
+    rospy.loginfo(odom_pub.get_num_connections())
 
 
 def yaw_to_quaternion(yaw):
