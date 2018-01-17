@@ -28,8 +28,8 @@ speed = None
 speed_change_threshold = 0.1
 
 
-first_speed = None
-first_steering = None
+last_speed = None
+last_steering = None
 
 ackerman_angles = [45, 0, -45]
 steering_angles = [0, 100, 179]
@@ -125,33 +125,35 @@ def get_steering_and_speed(x, y, yaw):
 
 
 def kalman_callback(odom_msg):
-    global speed, first_run, first_speed, first_steering
+    global speed, first_run, last_speed, last_steering
 
-    rospy.loginfo('in callback')
+    # rospy.loginfo('in callback')
 
     if first_run:
         first_run = False
         start_stop_pub.publish(0)
     else:
-        # pass
+        pass
 
         # to plot circle
-        steer_pub.publish(first_steering)
-        speed_pub.publish(first_speed)
-        return
+        # steer_pub.publish(last_steering)
+        # speed_pub.publish(last_speed)
+        # return
 
     x, y, yaw = unpack_msg(odom_msg)
 
     control_steering, speed = get_steering_and_speed(x, y, yaw)
 
-    first_speed = speed
-    first_steering = control_steering
+    # need them to complete 1. exercise, driving in a circle
+    # and keep publishing the first values
+    last_speed = speed
+    last_steering = control_steering
 
     steer_pub.publish(control_steering)
     speed_pub.publish(speed)
 
-    rospy.loginfo('controlling; speed: {}; angle: {}'.format(speed, control_steering))
-
+    # useful debugging logs
+    # rospy.loginfo('controlling; speed: {}; angle: {}'.format(speed, control_steering))
     # rospy.loginfo('f_x: {}'.format(f_x_car))
     # rospy.loginfo('steering: {}'.format(control_steering))
     # rospy.loginfo('f_x: {}; f_y: {}'.format(f_x, f_y))
