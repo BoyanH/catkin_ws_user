@@ -41,7 +41,7 @@ def main(map_file):
 
         if (r > 10):
             r = 10
-        print(r)
+        print(steering)
         if (steering < 0.0):
             r = -r
         xc = x1 - np.sin(yaw) * r
